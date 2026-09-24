@@ -1,0 +1,15 @@
+name: "liblhdc"
+description:
+    "Savitech LHDC V3/V4 Codec prebuilt shared libraries."
+
+third_party {
+  identifier {
+    type: "Git"
+    value: "https://gitlab.com/savitech-lhdc/savitech-lhdc-codec-aosp-15.0.0r4"
+    version: "AOSP15_LHDC_V5.2.7ST_DocV5.2.2"
+    primary_source: true
+  }
+  version: "LHDC-V3V4_V4.1.1_f4fc93"
+  last_upgrade_date { year: 2025 month: 1 day: 6 }
+  license_type: NOTICE
+}

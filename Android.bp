@@ -1,0 +1,49 @@
+cc_prebuilt_library_shared {
+    name: "liblhdc",
+    compile_multilib: "64",
+    arch: {
+        arm64: {
+            srcs: ["libs/arm64-v8a/liblhdc.so"],
+        },
+    },
+    stl: "none",
+    shared_libs: [
+        "liblog",
+        "libstdc++",
+    ],
+    strip: {
+        none: true,
+    },
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.bt",
+    ],
+    min_sdk_version: "Tiramisu",
+}
+
+cc_prebuilt_library_shared {
+    name: "liblhdcBT_enc",
+    compile_multilib: "64",
+    arch: {
+        arm64: {
+            srcs: ["libs/arm64-v8a/liblhdcBT_enc.so"],
+        },
+    },
+    export_include_dirs: [
+        "inc",
+        "include",
+    ],
+    shared_libs: [
+        "libcutils",
+        "liblog",
+        "liblhdc",
+    ],
+    strip: {
+        none: true,
+    },
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.bt",
+    ],
+    min_sdk_version: "Tiramisu",
+}
